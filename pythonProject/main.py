@@ -1,3 +1,5 @@
+import os
+
 import mysql
 from flask import Flask, request, jsonify
 from trie import Trie
@@ -80,5 +82,6 @@ def bulk_insert():
     finally:
         cursor.close()
         connection.close()
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
