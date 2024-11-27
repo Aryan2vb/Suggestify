@@ -7,7 +7,7 @@ Suggestify is a powerful backend API built with Flask and Trie data structure. I
 
 	•	Backend Framework: Flask
 	•	Data Structure: Trie (for efficient autocomplete functionality)
-	•	Database: PostgreSQL (or your preferred database)
+	•	Database: Mysql (or your preferred database)
 	•	Deployment: Render (Cloud Platform)
 	•	API Testing: Postman / cURL
 	•	CORS Handling: Flask-CORS
