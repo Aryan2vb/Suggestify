@@ -1,1 +1,4 @@
-Flask==2.x.x  # Use the version you installed
+
+Flask==2.1.0
+mysql-connector-python==8.0.28
+flask-cors==3.1.1
