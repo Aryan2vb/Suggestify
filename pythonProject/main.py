@@ -18,6 +18,16 @@ def load_words_into_trie():
 
 load_words_into_trie()
 
+
+@app.route('/',methods=['GET'])
+def g():
+    # connection = get_connection()
+    # cursor = connection.cursor()a
+    # cursor.execute("Select word from words")
+    return  "HEllo"
+
+
+
 @app.route('/insert', methods=['POST'])
 def insert_word():
     word = request.json.get('word')
