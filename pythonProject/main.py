@@ -44,7 +44,7 @@ def g():
             }
         }
     }
-    "For more info": {"documentation": "https://github.com/Aryan2vb/Suggestify-Backend/blob/main/README.md"}
+    "For more info": {"message": "Welcome to the Suggestify API!", "documentation": "https://github.com/Aryan2vb/Suggestify-Backend/blob/main/README.md"}
     )
 
 
