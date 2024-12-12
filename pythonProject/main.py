@@ -1,6 +1,7 @@
 import os
 
 import mysql
+
 from flask import Flask, request, jsonify
 from trie import Trie
 from db_config import get_connection
@@ -23,10 +24,7 @@ load_words_into_trie()
 
 @app.route('/',methods=['GET'])
 def g():
-    # connection = get_connection()
-    # cursor = connection.cursor()a
-    # cursor.execute("Select word from words")
-    return  "HEllo"
+    return  "trie is building"
 
 
 
@@ -74,7 +72,11 @@ def bulk_insert():
 
         # Bulk insert into Trie
         for word in data:
-            trie.insert(word)
+            for i in range(len(word)):
+                st = ""
+                for j in range(i,len(word)):
+                    st += word[j]
+                    trie.insert(st)
 
         return jsonify({"message": f"Successfully inserted {len(data)} words."}), 200
     except Exception as e:
@@ -84,4 +86,4 @@ def bulk_insert():
         connection.close()
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 5000)))
+    app.run(debug=True, host='0.0.0.0', port=int(os.environ.get('PORT', 3001)))
