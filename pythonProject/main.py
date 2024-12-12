@@ -30,25 +30,21 @@ def g():
             "/insert": {
                 "method": "POST",
                 "description": "Insert a single word.",
-                "request": {"word": "string"}
+                "request_body": {"word": "string"}
             },
             "/bulk-insert": {
                 "method": "POST",
                 "description": "Insert multiple words.",
-                "request": {"words": ["string1", "string2", ...]}
+                "request_body": {"words": ["string1", "string2", "string3"]}
             },
             "/search": {
                 "method": "GET",
                 "description": "Search for words matching a prefix.",
-                "parameters": {"prefix": "string"}
+                "query_parameters": {"prefix": "string"}
             }
         },
-        "For more info": {  # Added this line
-            "message": "Welcome to the Suggestify API!",
-            "documentation": "https://github.com/Aryan2vb/Suggestify-Backend/blob/main/README.md"
-        }  # Added this line
+        "documentation": "https://github.com/Aryan2vb/Suggestify-Backend/blob/main/README.md"
     })
-
 
 @app.route('/insert', methods=['POST'])
 def insert_word():
