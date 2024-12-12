@@ -42,10 +42,12 @@ def g():
                 "description": "Search for words matching a prefix.",
                 "parameters": {"prefix": "string"}
             }
-        }
-    }
-    "For more info": {"message": "Welcome to the Suggestify API!", "documentation": "https://github.com/Aryan2vb/Suggestify-Backend/blob/main/README.md"}
-    )
+        },
+        "For more info": {  # Added this line
+            "message": "Welcome to the Suggestify API!",
+            "documentation": "https://github.com/Aryan2vb/Suggestify-Backend/blob/main/README.md"
+        }  # Added this line
+    })
 
 
 @app.route('/insert', methods=['POST'])
